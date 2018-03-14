@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Kim Clements: Illustrator, doodler and martial arts lover &#129303;</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="./static/css/styles.css"/>
+  </head>
+  <body>
+    <main role="main">
+      <h1 class="site-logo">
+        <span class="visualhide">Kim Clements</span>
+      </h1>
+      <ul class="social">
+        <li>
+          <a class="social-link social-link-facebook" href="https://www.facebook.com/kimclementsillustration/" title="Find me on Facebook!">
+            <span class="visualhide">Facebook</span>
+          </a>
+        </li>
+        <li>
+          <a class="social-link social-link-twitter" href="https://twitter.com/kim_clements" title="Follow me on Twitter!">
+            <span class="visualhide">Twitter</span>
+          </a>
+        </li>
+        <li>
+          <a class="social-link social-link-instagram" href="https://www.instagram.com/kim.clements/" title="Follow me on Instagram!">
+            <span class="visualhide">Instagram</span>
+          </a>
+        </li>
+        <li>
+          <a class="social-link social-link-pinterest" href="https://uk.pinterest.com/kimdisco/" title="Follow me on Pinterest!">
+            <span class="visualhide">Pinterest</span>
+          </a>
+        </li>
+      </ul>
+    </main>
+    <script>
+      var target = document.querySelector('html'),
+          bgs = ['eyes','eyes-rainbow','rainbow', 'falling', 'wheel'];
+      function cycleBg(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      target.addEventListener('click', function (e) {
+        var bg = bgs[cycleBg(0,4)];
+        target.setAttribute('style','background-image: url("static/images/' + bg + '.gif")')
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+/**
+* Kim Clements
+* Styles
+**/
+
+@import url('https://fonts.googleapis.com/css?family=Nunito|Pangolin');
+
+
+/**
+ * Normalize styles
+ */
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+}
+
+/**
+ * Typography
+ */
+body {
+  font: 160%/1.8 'Nunito', sans-serif;
+}
+
+@keyframes iconshake {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(8deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(-8deg);
+  }
+}
+
+
+/**
+ * Layout
+ */
+html {
+  background:
+    url('../images/eyes-rainbow.gif')
+    center center/10rem;
+}
+body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - 4rem);
+  padding: 2rem;
+
+}
+.visualhide {
+  text-indent: 100%;
+  width: 0;
+  height: 0;
+  font-size: 0;
+}
+main {
+  width: auto;
+  max-width: 100rem;
+  background: white;
+  padding: 3rem;
+  border-radius: 1rem;
+  text-align: center;
+  border: .5rem solid black;
+}
+main p {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+}
+.site-logo {
+  display: block;
+  background: url('../images/kimclements-logo.png') no-repeat center center/contain;
+  height: 10rem;
+}
+.social {
+  list-style: none;
+}
+.social li {
+  display: inline;
+}
+.social-link {
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  background-size: contain;
+  background-position: center;
+}
+.social-link:hover {
+  animation: iconshake .25s infinite ease;
+  filter: contrast(200%);
+}
+.social-link-facebook {
+  background-image: url('../images/icon-facebook.png');
+}
+.social-link-twitter {
+  background-image: url('../images/icon-twitter.png');
+}
+.social-link-instagram {
+  background-image: url('../images/icon-instagram.png');
+}
+.social-link-pinterest {
+  background-image: url('../images/icon-pinterest.png');
+}
+
+@media screen and (min-width: 600px) {
+  .social-link {
+    width: 8rem;
+    height: 8rem;
+  }
+}
